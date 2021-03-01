@@ -24,11 +24,14 @@ class ImageWithFrame extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image(
-          width: imageWidth,
-          height: height,
-          fit: BoxFit.cover,
-          image: Image.file(File('File Path Here')).image,
+        ClipRRect(
+          borderRadius: BorderRadius.circular(borderRadius),
+          child: Image(
+            width: imageWidth,
+            height: height,
+            fit: BoxFit.cover,
+            image: Image.file(File('File Path Here')).image,
+          ),
         ),
         ImageFrame(
           frameColor: frameColor,
