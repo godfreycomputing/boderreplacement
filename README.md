@@ -1,2 +1,2 @@
 # boderreplacement
-Border Replacement Over Image Replacement
+Border Over Image Widget
