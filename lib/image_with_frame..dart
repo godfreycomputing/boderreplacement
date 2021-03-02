@@ -10,6 +10,7 @@ class ImageWithFrame extends StatelessWidget {
   final double frameWidth;
   final double frameHeight;
   final double borderRadius;
+  final File imageFile;
 
   const ImageWithFrame({
     this.height,
@@ -19,6 +20,7 @@ class ImageWithFrame extends StatelessWidget {
     this.frameWidth,
     this.frameHeight,
     this.borderRadius,
+    this.imageFile,
   });
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class ImageWithFrame extends StatelessWidget {
             width: imageWidth,
             height: height,
             fit: BoxFit.cover,
-            image: Image.file(File('File Path Here')).image,
+            image: Image.file(imageFile).image,
           ),
         ),
         ImageFrame(
